@@ -3,11 +3,15 @@
 	font-family: Lobster;
 	src:url("../fonts/Lobster-Regular.ttf");
 }
+body {
+	background-image: url("../images/las_palmas_sign.jpg");
+	background-size: contain;
+	background-position: fixed;
+}
 .heading {
-	padding-top: 1px;
+	padding-top: 100px;
 	text-align: center;
 	font-size: 45px;
-	background: url("../images/las_palmas_sign.jpg");
 	height: 1200px;
 	width: 100%;
 	background-repeat: no-repeat;
@@ -26,11 +30,12 @@
 	position: fixed;
 	width: 100%;
 	top: 0;
+	left: 0;
 }
 .nav li {
 	display: inline;
 	float: right;
-	padding: 15px 30px;
+	margin: 5px 30px;
 }
 .nav button {
 	padding: 15px 30px;
@@ -39,7 +44,19 @@
 	background-repeat: no-repeat;
 	background-color: transparent;
 	border: none;
+	width: 100px;
+	font-family: Lobster;
+}
+.nav button p {
+	transform: rotate(-30deg);
+}
+.nav #bu1 {
+	text-indent: 10px;
+}
+.nav #bu2 {
+	text-indent: 5px;
 }
 .nav button:hover {
-	background-image: 
+	width: 125px; 
+	font-size: 18px;
 }
