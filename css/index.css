@@ -17,3 +17,29 @@
 .heading h1 {
 	font-family: Lobster;
 }
+.nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color:darkolivegreen;
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+.nav li {
+	display: inline;
+	float: right;
+	padding: 15px 30px;
+}
+.nav button {
+	padding: 15px 30px;
+	background-image: url("../images/Jalepeno.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+}
+.nav button:hover {
+	background-image: 
+}
