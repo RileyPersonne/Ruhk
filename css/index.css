@@ -21,8 +21,7 @@ body {
 .heading h1 {
 	font-family: Lobster;
 }
-.nav ul {
-	list-style-type: none;
+.nav {
 	margin: 0;
 	padding: 0;
 	background-color:darkolivegreen;
@@ -31,11 +30,21 @@ body {
 	width: 100%;
 	top: 0;
 	left: 0;
+	height: 110px
+}
+.nav #logo {
+	width: 260px;
+	height: 130px;
+	display: inline;
+}
+.nav ul {
+	list-style-type: none;
+	display: inline;
 }
 .nav li {
 	display: inline;
 	float: right;
-	margin: 5px 30px;
+	margin: 30px 30px;
 }
 .nav button {
 	padding: 15px 30px;
