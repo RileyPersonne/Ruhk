@@ -1,0 +1,19 @@
+@charset "utf-8";
+@font-face {
+	font-family: Lobster;
+	src:url("../fonts/Lobster-Regular.ttf");
+}
+.heading {
+	padding-top: 1px;
+	text-align: center;
+	font-size: 45px;
+	background: url("../images/las_palmas_sign.jpg");
+	height: 1200px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+.heading h1 {
+	font-family: Lobster;
+}
