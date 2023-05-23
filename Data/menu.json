@@ -1,0 +1,162 @@
+[
+    {
+        "Item": "Tacos",
+        "Price": 6.99
+    },
+    {
+        "Item": "Burrito",
+        "Price": 7.99
+    },
+    {
+        "Item": "Torta",
+        "Price": 7.99
+    },
+    {
+        "Item": "Quesadilla",
+        "Price": 7.99
+    },
+    {
+        "Item": "Mulitas",
+        "Price": 10.99
+    },
+    {
+        "Item": "Sopitos",
+        "Price": 10.99
+    },
+    {
+        "Item": "Flautas",
+        "Price": 10.99
+    },
+    {
+        "Item": "Huevos Ranchero 12.99",
+        "Price": null
+    },
+    {
+        "Item": "Menudo",
+        "Price": 13.99
+    },
+    {
+        "Item": "Pozole",
+        "Price": 13.99
+    },
+    {
+        "Item": "Birria",
+        "Price": 13.99
+    },
+    {
+        "Item": "Carne Asada",
+        "Price": 19.99
+    },
+    {
+        "Item": "Pollo Frito",
+        "Price": 19.99
+    },
+    {
+        "Item": "Camarones al mojo de ajo",
+        "Price": 19.99
+    },
+    {
+        "Item": "Camarones a la diabla",
+        "Price": 19.99
+    },
+    {
+        "Item": "Filete de Pescado",
+        "Price": 16.99
+    },
+    {
+        "Item": "Cocktail de Camarones",
+        "Price": 18.99
+    },
+    {
+        "Item": "Mojarra Frita",
+        "Price": 19.99
+    },
+    {
+        "Item": "Enchiladas verdes",
+        "Price": 16.99
+    },
+    {
+        "Item": "Carnitas Pork",
+        "Price": 18
+    },
+    {
+        "Item": "Burrito wet",
+        "Price": 13.99
+    },
+    {
+        "Item": "Gordita",
+        "Price": 10.99
+    },
+    {
+        "Item": "Cielo mar y Tierra",
+        "Price": 24.99
+    },
+    {
+        "Item": "Pollo a la crema",
+        "Price": 19.99
+    },
+    {
+        "Item": "Chunky Pork en Salsa Verde",
+        "Price": 18.99
+    },
+    {
+        "Item": "Taco Salad",
+        "Price": 10.99
+    },
+    {
+        "Item": "Tamales con arroz y frijoles",
+        "Price": 12.99
+    },
+    {
+        "Item": "Sope taco y tostada",
+        "Price": 10.99
+    },
+    {
+        "Item": "Chile Rellenos",
+        "Price": 16.99
+    },
+    {
+        "Item": "Tostada de ceviche",
+        "Price": 6.99
+    },
+    {
+        "Item": "Tortilla soup",
+        "Price": 12
+    },
+    {
+        "Item": "fish taco",
+        "Price": 12.99
+    },
+    {
+        "Item": "Shrimp burrito",
+        "Price": 14
+    },
+    {
+        "Item": "Arroz con pollo",
+        "Price": 19.99
+    },
+    {
+        "Item": "Pechuga de pollo asada",
+        "Price": 19.99
+    },
+    {
+        "Item": "camarones cora",
+        "Price": 19.99
+    },
+    {
+        "Item": "camarones con tocine",
+        "Price": 19.99
+    },
+    {
+        "Item": "jalapenos con tocino",
+        "Price": 5.99
+    },
+    {
+        "Item": "Torta de queso de puerco",
+        "Price": 9.99
+    },
+    {
+        "Item": "torta loka",
+        "Price": 12.99
+    }
+]
