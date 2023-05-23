@@ -7,7 +7,6 @@
 	padding-top: 1px;
 	text-align: center;
 	font-size: 45px;
-	background: url("../images/las_palmas_sign.jpg");
 	height: 1200px;
 	width: 100%;
 	background-repeat: no-repeat;
@@ -16,4 +15,8 @@
 }
 .heading h1 {
 	font-family: Lobster;
+}
+
+body {
+		background: url("../images/las_palmas_sign.jpg");
 }
