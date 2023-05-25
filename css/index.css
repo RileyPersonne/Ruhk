@@ -3,12 +3,12 @@
 	font-family: Lobster;
 	src:url("../fonts/Lobster-Regular.ttf");
 }
-body {
+body .background {
 	background-image: url("../images/las_palmas_sign.jpg");
 	background-size: contain;
 	background-position: fixed;
 }
-.heading {
+.background {
 	padding-top: 100px;
 	text-align: center;
 	font-size: 45px;
