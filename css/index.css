@@ -3,21 +3,15 @@
 	font-family: Lobster;
 	src:url("../fonts/Lobster-Regular.ttf");	
 }
-
 body .background {
 	background-image: url("../images/las_palmas_sign.jpg");
-	background-size: contain;
-	background-position: fixed;
 }
 .background {
-	padding-top: 100px;
-	text-align: center;
-	font-size: 45px;
-	height: 1200px;
-	width: 100%;
+	height: 2000px;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: contain;
+	background-size: cover;
+	background-attachment:fixed;
 }
 .heading h1 {
 	font-family: Lobster;
@@ -31,7 +25,7 @@ body .background {
 	width: 100%;
 	top: 0;
 	left: 0;
-	height: 110px
+	height: 110px;
 }
 .nav #logo {
 	width: 260px;
@@ -61,7 +55,7 @@ body .background {
 }
 .nav button p {
 	transform: rotate(-30deg);
-	margin-bottom: 50px
+	margin-bottom: 50px;
 }
 .nav #bu1 {
 	text-indent: 10px;
@@ -70,7 +64,8 @@ body .background {
 	text-indent: 10px;
 }
 .nav button:hover {
-	background-image: url("../images/Jalepeno2.png")
+	background-image: url("../images/Jalepeno2.png");
+	color: #f6e544;
 }
 .about {
 	text-align: center;
@@ -78,5 +73,14 @@ body .background {
 	padding: 150px;
 }
 .about #aboutus {
-	font-family: Lobster
+	font-family: Lobster;
+}
+footer {
+	background-color: darkolivegreen;
+	text-align: center;
+	height: 150px;
+	padding-top: 30px;
+}
+footer p {
+	dispay: inline;
 }
