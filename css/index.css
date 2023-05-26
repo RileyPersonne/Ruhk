@@ -3,6 +3,9 @@
 	font-family: Lobster;
 	src: url("../fonts/Lobster-Regular.ttf");	
 }
+body {
+	margin: 0;
+}
 body .background {
 	background-image: url("../images/las_palmas_sign.jpg");
 }
@@ -41,7 +44,7 @@ body .background {
 .nav li {
 	display: inline;
 	float: right;
-	margin: 20px 30px;
+	margin: 15px 30px;
 }
 .nav button {
 	background-image: url("../images/Jalepeno.png");
