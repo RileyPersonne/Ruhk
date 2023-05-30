@@ -1,22 +1,24 @@
 @charset "utf-8";
 @font-face {
 	font-family: Lobster;
-	src:url("../fonts/Lobster-Regular.ttf");
+	src: url("../fonts/Lobster-Regular.ttf");
+}
+@font-face {
+	font-family: DancingScript;
+	src: url("../fonts/Dancing-Script-Variable.ttf");
 }
 body {
-	background-image: url("../images/las_palmas_sign.jpg");
-	background-size: contain;
-	background-position: fixed;
+	margin: 0;
 }
-.heading {
-	padding-top: 100px;
-	text-align: center;
-	font-size: 45px;
-	height: 1200px;
-	width: 100%;
+body .background {
+	background-image: url("../images/las_palmas_sign.jpg");
+}
+.background {
+	height: 2000px;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: contain;
+	background-size: cover;
+	background-attachment: fixed;
 }
 .heading h1 {
 	font-family: Lobster;
@@ -24,15 +26,16 @@ body {
 .nav {
 	margin: 0;
 	padding: 0;
-	background-color:darkolivegreen;
+	background-color: darkolivegreen;
 	overflow: hidden;
 	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
-	height: 110px
+	height: 105px;
+	z-index: 100000;
 }
-.nav #logo {
+.nav #lplogo {
 	width: 260px;
 	height: 130px;
 	display: inline;
@@ -45,7 +48,7 @@ body {
 .nav li {
 	display: inline;
 	float: right;
-	margin: 20px 30px;
+	margin: 15px 30px;
 }
 .nav button {
 	background-image: url("../images/Jalepeno.png");
@@ -60,7 +63,7 @@ body {
 }
 .nav button p {
 	transform: rotate(-30deg);
-	margin-bottom: 50px
+	margin-bottom: 50px;
 }
 .nav #bu1 {
 	text-indent: 10px;
@@ -69,5 +72,25 @@ body {
 	text-indent: 10px;
 }
 .nav button:hover {
-	background-image: url("../images/Jalepeno2.png")
+	background-image: url("../images/Jalepeno2.png");
+	color: #f6e544;
+}
+.about {
+	text-align: center;
+	background-color: saddlebrown;
+	padding: 150px;
+}
+.about #aboutus {
+	font-family: DancingScript;
+}
+footer {
+	background-color: darkolivegreen;
+	text-align: center;
+	height: 150px;
+	width: 100%;
+	padding-top: 30px;
+}
+footer p {
+	dispay: inline;
+	font-size: 22px;
 }
