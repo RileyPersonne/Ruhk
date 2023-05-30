@@ -1,7 +1,11 @@
 @charset "utf-8";
 @font-face {
 	font-family: Lobster;
-	src: url("../fonts/Lobster-Regular.ttf");	
+	src: url("../fonts/Lobster-Regular.ttf");
+}
+@font-face {
+	font-family: DancingScript;
+	src: url("../fonts/Dancing-Script-Variable.ttf");
 }
 body {
 	margin: 0;
@@ -77,7 +81,7 @@ body .background {
 	padding: 150px;
 }
 .about #aboutus {
-	font-family: Lobster;
+	font-family: DancingScript;
 }
 footer {
 	background-color: darkolivegreen;
@@ -88,4 +92,5 @@ footer {
 }
 footer p {
 	dispay: inline;
+	font-size: 22px;
 }
