@@ -84,7 +84,7 @@ module.exports = {
         "no-compare-neg-zero": "off",
         "no-cond-assign": "error",
         "no-confusing-arrow": "off",
-        "no-console": "error",
+        "no-console": "off",
         "no-const-assign": "error",
         "no-constant-condition": "error",
         "no-continue": "off",

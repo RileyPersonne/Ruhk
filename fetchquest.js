@@ -19,7 +19,7 @@ let category = 0
 function initialize(products) {
     // grab the UI elements that we need to manipulate
     const category = document.querySelector('#category');
-    const main = document.querySelector('main');
+    const main = document.getElementsByClassName('mainContent');
 
     // keep a record of what the last category and search term entered were
     let lastCategory = category.value;
