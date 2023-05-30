@@ -82,6 +82,7 @@ body .background {
 }
 .about #aboutus {
 	font-family: DancingScript;
+	font-weight: 500;
 }
 footer {
 	background-color: darkolivegreen;
