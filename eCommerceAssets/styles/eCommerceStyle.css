@@ -153,18 +153,18 @@ header {
 }
 /* footer */
 #mainWrapper footer {
-	clear: both;
-	overflow: auto;
-	background-color: olivedrab;
-	font-family: source-sans-pro, sans-serif;
-	font-style: normal;
-	font-weight: 200;
-	line-height: 1.8;
-	padding-top: 22px;
-	padding-left: 22px;
-	text-align: center;
-	padding-bottom: 22px;
-	padding-right: 22px;
+    clear: both;
+    overflow: auto;
+    background-color: olivedrab;
+    font-family: source-sans-pro, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 1.4;
+    padding-top: 22px;
+    padding-left: 22px;
+    text-align: right;
+    padding-bottom: 22px;
+    padding-right: 22px;
 }
 /*Each footer content */
 #mainWrapper footer div {
@@ -217,6 +217,9 @@ footer .footerlinks {
 /* search field in sidebar */
 #content .sidebar #search {
 	display: none;
+}
+footer div p {
+    font-size: 24px;
 }
 /* sidebar */
 #content .sidebar {
