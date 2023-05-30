@@ -4,135 +4,85 @@
 // once the products have been successfully loaded and formatted as a JSON object
 // using response.json(), run the initialize() function
 fetch('menu.json')
-  .then( response => {
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
-    }
-    return response.json();
-  })
-  .then( json => initialize(json) )
-  .catch( err => console.error(`Fetch problem: ${err.message}`) );
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(json => initialize(json))
+    .catch(err => console.error(`Fetch problem: ${err.message}`));
 
 // sets up the app logic, declares required variables, contains all the other functions
+let main = 0
+let category = 0
 function initialize(products) {
-  // grab the UI elements that we need to manipulate
-  const category = document.querySelector('#category');
-  const main = document.querySelector('main');
+    // grab the UI elements that we need to manipulate
+    const category = document.querySelector('#category');
+    const main = document.querySelector('main');
 
-  // keep a record of what the last category and search term entered were
-  let lastCategory = category.value;
+    // keep a record of what the last category and search term entered were
+    let lastCategory = category.value;
 
-  // these contain the results of filtering by category, and search term
-  // finalGroup will contain the products that need to be displayed after
-  // the searching has been done. Each will be an array containing objects.
-  // Each object will represent a product
-  let categoryGroup;
-  let finalGroup;
+    // these contain the results of filtering by category, and search term
+    // finalGroup will contain the products that need to be displayed after
+    // the searching has been done. Each will be an array containing objects.
+    // Each object will represent a product
+    let categoryGroup;
+    let finalGroup;
 
-  // To start with, set finalGroup to equal the entire products database
-  // then run updateDisplay(), so ALL products are displayed initially.
-  finalGroup = products;
-  updateDisplay();
+    // To start with, set finalGroup to equal the entire products database
+    // then run updateDisplay(), so ALL products are displayed initially.
+    finalGroup = products;
+    updateDisplay();
 
-  // Set both to equal an empty array, in time for searches to be run
-  categoryGroup = [];
-  finalGroup = [];
-
-  function selectCategory(e) {
-    // Use preventDefault() to stop the form submitting — that would ruin
-    // the experience
-    e.preventDefault();
-
-    // Set these back to empty arrays, to clear out the previous search
+    // Set both to equal an empty array, in time for searches to be run
     categoryGroup = [];
     finalGroup = [];
 
-    // if the category and search term are the same as they were the last time a
-    // search was run, the results will be the same, so there is no point running
-    // it again — just return out of the function
-    if (category.value === lastCategory && searchTerm.value.trim() === lastSearch) {
-      return;
-    } else {
-      // update the record of last category and search term
-      lastCategory = category.value;
-      lastSearch = searchTerm.value.trim();
-      // In this case we want to select all products, then filter them by the search
-      // term, so we just set categoryGroup to the entire JSON object, then run selectProducts()
-      if (category.value === 'All') {
-        categoryGroup = products;
-        selectProducts();
-      // If a specific category is chosen, we need to filter out the products not in that
-      // category, then put the remaining products inside categoryGroup, before running
-      // selectProducts()
-      } else {
-        // the values in the <option> elements are uppercase, whereas the categories
-        // store in the JSON (under "type") are lowercase. We therefore need to convert
-        // to lower case before we do a comparison
-        const lowerCaseType = category.value.toLowerCase();
-        // Filter categoryGroup to contain only products whose type includes the category
-        categoryGroup = products.filter( product => product.type === lowerCaseType );
-
-        // Run selectProducts() after the filtering has been done
-        selectProducts();
-      }
-    }
-  }
     // Once we have the final group, update the display
     updateDisplay();
-  }
+}
 
-  // start the process of updating the display with the new set of products
-  function updateDisplay() {
+// start the process of updating the display with the new set of products
+function updateDisplay() {
     // remove the previous contents of the <main> element
     while (main.firstChild) {
-      main.removeChild(main.firstChild);
+        main.removeChild(main.firstChild);
     }
 
-    // if no products match the search term, display a "No results to display" message
-    if (finalGroup.length === 0) {
-      const para = document.createElement('p');
-      para.textContent = 'No results to display!';
-      main.appendChild(para);
-    // for each product we want to display, pass its product object to fetchBlob()
-    } else {
-      for (const product of finalGroup) {
-        fetchBlob(product);
-      }
-    }
-  }
-
-  // fetchBlob uses fetch to retrieve the image for that product, and then sends the
-  // resulting image display URL and product object on to showProduct() to finally
-  // display it
-  function fetchBlob(product) {
+// fetchBlob uses fetch to retrieve the image for that product, and then sends the
+// resulting image display URL and product object on to showProduct() to finally
+// display it
+function fetchBlob(product) {
     // construct the URL path to the image file from the product.image property
     const url = `images/${product.image}`;
     // Use fetch to fetch the image, and convert the resulting response to a blob
     // Again, if any errors occur we report them in the console.
     fetch(url)
-      .then( response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error: ${response.status}`);
-        }
-        return response.blob();
-      })
-      .then( blob => showProduct(blob, product) )
-      .catch( err => console.error(`Fetch problem: ${err.message}`) );
-  }
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error: ${response.status}`);
+            }
+            return response.blob();
+        })
+        .then(blob => showProduct(blob, product))
+        .catch(err => console.error(`Fetch problem: ${err.message}`));
+}
 
-  // Display a product inside the <main> element
-  function showProduct(blob, product) {
+// Display a product inside the <main> element
+function showProduct(blob, product) {
     // Convert the blob to an object URL — this is basically an temporary internal URL
     // that points to an object stored inside the browser
     const objectURL = URL.createObjectURL(blob);
     // create <section>, <h2>, <p>, and <img> elements
     const section = document.createElement('article');
-	  div.classList.add('productInfo');
+    section.classList.add('productInfo');
     const image = document.createElement('img');
     const para = document.createElement('p');
-	  div.classList.add('price');
+    para.classList.add('price');
     const heading = document.createElement('p');
-	  div.classList.add('productContent');
+    heading.classList.add('productContent');
 
 
 
@@ -157,5 +107,5 @@ function initialize(products) {
     section.appendChild(heading);
     section.appendChild(para);
     section.appendChild(image);
-  }
+}
 }
